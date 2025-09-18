@@ -1,12 +1,56 @@
 /* Base styles for the body and fonts */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f3f4f6;
-    color: #1f2937;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
-/* --- Hamburger Menu CSS "Hack" --- */
-/* This CSS controls the hamburger menu's animation based on a hidden checkbox state */
+/* --- New Color Variables --- */
+:root {
+    /* Light Theme */
+    --bg-color: #F0F4F8; /* A very light, cool gray/blue */
+    --text-color: #1A365D; /* A deep, dark blue for high contrast */
+    --card-bg: #FFFFFF;
+    --card-border: #E2E8F0;
+    --primary-color: #4299E1; /* A friendly, bright blue */
+    --primary-hover: #3182CE; /* A slightly darker blue for hover effects */
+    --header-bg: rgba(255, 255, 255, 0.9);
+    --shadow-color: rgba(66, 153, 225, 0.2); /* A subtle blue shadow */
+    --heading-color: #3182CE; /* A distinct, rich blue for headings */
+}
+
+.dark {
+    /* Dark Theme */
+    --bg-color: #1A202C; /* Very dark gray, almost black */
+    --text-color: #EBF8FF; /* A very light blue/white */
+    --card-bg: #2D3748; /* Darker card background */
+    --card-border: #4A5568;
+    --primary-color: #63B3ED; /* Lighter blue for better visibility in dark mode */
+    --primary-hover: #4299E1;
+    --header-bg: rgba(45, 55, 72, 0.9);
+    --shadow-color: rgba(99, 179, 237, 0.15);
+    --heading-color: #63B3ED; /* Lighter blue for headings in dark mode */
+}
+
+/* Header & Hamburger Menu */
+header {
+    background-color: var(--header-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px -1px var(--shadow-color), 0 2px 4px -1px var(--shadow-color);
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
+}
+
+.dark header {
+    box-shadow: 0 4px 6px -1px var(--shadow-color), 0 2px 4px -1px var(--shadow-color);
+}
+
+.dark header .text-2xl {
+    color: var(--text-color);
+}
+
+/* Hamburger Menu "Hack" */
 #menu-toggle:checked ~ .menu-overlay {
     transform: translateX(0);
 }
@@ -23,11 +67,152 @@ body {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* The hamburger icon lines */
 .hamburger-icon span {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: #3b82f6;
+    background-color: var(--primary-color);
     transition: all 0.3s ease-in-out;
+}
+
+.dark .hamburger-icon span {
+    background-color: var(--primary-color);
+}
+
+.menu-overlay {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.menu-overlay a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.menu-overlay a:hover {
+    color: var(--primary-hover);
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+    color: var(--heading-color);
+    transition: color 0.5s ease;
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4 {
+    color: var(--heading-color);
+}
+
+/* Sections */
+section {
+    background-color: var(--card-bg);
+    box-shadow: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -2px var(--shadow-color);
+}
+
+.dark section {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    box-shadow: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -2px var(--shadow-color);
+}
+
+/* --- The final, correct styles for the filter buttons --- */
+.filter-btn {
+    padding: 0.5rem 1.5rem; /* px-6 py-2 */
+    border-radius: 9999px; /* rounded-full */
+    font-weight: 500; /* font-medium */
+    font-size: 0.875rem; /* text-sm */
+    background-color: #EBF8FF; /* A light blue */
+    color: #4A5568; /* A dark gray */
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+}
+
+.filter-btn:hover {
+    background-color: #BEE3F8; /* A hover blue */
+    color: #2D3748; /* A darker gray */
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+}
+
+.active-filter-btn {
+    background-color: var(--primary-color);
+    color: white !important;
+    box-shadow: 0 4px 6px -1px var(--shadow-color), 0 2px 4px -1px var(--shadow-color);
+}
+
+/* Dark mode adjustments */
+.dark .filter-btn {
+    background-color: #2D3748; /* gray-700 */
+    color: #E2E8F0; /* gray-200 */
+    box-shadow: 0 1px 3px rgba(255,255,255,0.1), 0 1px 2px rgba(255,255,255,0.06);
+}
+
+.dark .filter-btn:hover {
+    background-color: #4A5568; /* blue-400 */
+    color: #EBF8FF;
+}
+
+.dark .active-filter-btn {
+    background-color: var(--primary-color);
+    color: white !important;
+}
+
+/* Project Cards */
+.project-card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--card-border);
+}
+
+.dark .project-card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--card-border);
+}
+
+.project-card h3 {
+    color: var(--text-color);
+}
+
+.dark .project-card h3 {
+    color: var(--text-color);
+}
+
+.project-card p {
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+.dark .project-card p {
+    color: var(--text-color);
+    opacity: 0.8;
+}
+
+/* Contact Form Inputs */
+input, textarea {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--card-border);
+}
+
+.dark input, .dark textarea {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--card-border);
+}
+
+/* Footer */
+footer {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+}
+
+/* Banner section specific styles */
+.banner-item {
+    scroll-snap-align: start;
+}
+
+.banner-item img {
+    opacity: 0.8;
 }
