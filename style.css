@@ -1,53 +1,18 @@
 /* Base styles for the body and fonts */
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.5s ease, color 0.5s ease;
-}
-
-/* --- New Color Variables --- */
-:root {
-    /* Light Theme */
-    --bg-color: #F0F4F8; /* A very light, cool gray/blue */
-    --text-color: #1A365D; /* A deep, dark blue for high contrast */
-    --card-bg: #FFFFFF;
-    --card-border: #E2E8F0;
-    --primary-color: #4299E1; /* A friendly, bright blue */
-    --primary-hover: #3182CE; /* A slightly darker blue for hover effects */
-    --header-bg: rgba(255, 255, 255, 0.9);
-    --shadow-color: rgba(66, 153, 225, 0.2); /* A subtle blue shadow */
-    --heading-color: #3182CE; /* A distinct, rich blue for headings */
-}
-
-.dark {
-    /* Dark Theme */
-    --bg-color: #1A202C; /* Very dark gray, almost black */
-    --text-color: #EBF8FF; /* A very light blue/white */
-    --card-bg: #2D3748; /* Darker card background */
-    --card-border: #4A5568;
-    --primary-color: #63B3ED; /* Lighter blue for better visibility in dark mode */
-    --primary-hover: #4299E1;
-    --header-bg: rgba(45, 55, 72, 0.9);
-    --shadow-color: rgba(99, 179, 237, 0.15);
-    --heading-color: #63B3ED; /* Lighter blue for headings in dark mode */
+    background: linear-gradient(135deg, #A4C5FF, #96A3FF, #A3A3FF, #A9B8F0);
+    color: #000000;
+    transition: background 0.5s ease, color 0.5s ease;
 }
 
 /* Header & Hamburger Menu */
 header {
-    background-color: var(--header-bg);
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 4px 6px -1px var(--shadow-color), 0 2px 4px -1px var(--shadow-color);
-    transition: background-color 0.5s ease, box-shadow 0.5s ease;
-}
-
-.dark header {
-    box-shadow: 0 4px 6px -1px var(--shadow-color), 0 2px 4px -1px var(--shadow-color);
-}
-
-.dark header .text-2xl {
-    color: var(--text-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+    transition: background 0.5s ease, box-shadow 0.5s ease;
 }
 
 /* Hamburger Menu "Hack" */
@@ -71,16 +36,12 @@ header {
     display: block;
     width: 25px;
     height: 3px;
-    background-color: var(--primary-color);
+    background-color: #007BFF;
     transition: all 0.3s ease-in-out;
 }
 
-.dark .hamburger-icon span {
-    background-color: var(--primary-color);
-}
-
 .menu-overlay {
-    background-color: var(--primary-color);
+    background-color: #007BFF;
     color: white;
 }
 
@@ -90,39 +51,40 @@ header {
 }
 
 .menu-overlay a:hover {
-    color: var(--primary-hover);
+    color: #0056b3;
 }
 
 /* Headings */
 h1, h2, h3, h4 {
-    color: var(--heading-color);
+    color: #000000;
     transition: color 0.5s ease;
-}
-
-.dark h1, .dark h2, .dark h3, .dark h4 {
-    color: var(--heading-color);
 }
 
 /* Sections */
 section {
-    background-color: var(--card-bg);
-    box-shadow: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -2px var(--shadow-color);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
 }
 
-.dark section {
-    background-color: var(--card-bg);
-    color: var(--text-color);
-    box-shadow: 0 10px 15px -3px var(--shadow-color), 0 4px 6px -2px var(--shadow-color);
+/* Home Section with GIF Background */
+#home, #about, #work, #skills, #contact {
+    background-image: url('Gemini_Generated_Image_p5cnrrp5cnrrp5cn.gif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #A9B8F0; /* Fallback color */
 }
 
 /* --- The final, correct styles for the filter buttons --- */
 .filter-btn {
-    padding: 0.5rem 1.5rem; /* px-6 py-2 */
-    border-radius: 9999px; /* rounded-full */
-    font-weight: 500; /* font-medium */
-    font-size: 0.875rem; /* text-sm */
-    background-color: #EBF8FF; /* A light blue */
-    color: #4A5568; /* A dark gray */
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 0.875rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #4A5568;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
@@ -130,82 +92,48 @@ section {
 }
 
 .filter-btn:hover {
-    background-color: #BEE3F8; /* A hover blue */
-    color: #2D3748; /* A darker gray */
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #2D3748;
     box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
 }
 
 .active-filter-btn {
-    background-color: var(--primary-color);
+    background-color: #007BFF;
     color: white !important;
-    box-shadow: 0 4px 6px -1px var(--shadow-color), 0 2px 4px -1px var(--shadow-color);
-}
-
-/* Dark mode adjustments */
-.dark .filter-btn {
-    background-color: #2D3748; /* gray-700 */
-    color: #E2E8F0; /* gray-200 */
-    box-shadow: 0 1px 3px rgba(255,255,255,0.1), 0 1px 2px rgba(255,255,255,0.06);
-}
-
-.dark .filter-btn:hover {
-    background-color: #4A5568; /* blue-400 */
-    color: #EBF8FF;
-}
-
-.dark .active-filter-btn {
-    background-color: var(--primary-color);
-    color: white !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
 }
 
 /* Project Cards */
 .project-card {
-    background-color: var(--card-bg);
-    color: var(--text-color);
-    border-color: var(--card-border);
-}
-
-.dark .project-card {
-    background-color: var(--card-bg);
-    color: var(--text-color);
-    border-color: var(--card-border);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #000000;
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 .project-card h3 {
-    color: var(--text-color);
-}
-
-.dark .project-card h3 {
-    color: var(--text-color);
+    color: #000000;
 }
 
 .project-card p {
-    color: var(--text-color);
-    opacity: 0.8;
-}
-
-.dark .project-card p {
-    color: var(--text-color);
+    color: #000000;
     opacity: 0.8;
 }
 
 /* Contact Form Inputs */
 input, textarea {
-    background-color: var(--card-bg);
-    color: var(--text-color);
-    border-color: var(--card-border);
-}
-
-.dark input, .dark textarea {
-    background-color: var(--card-bg);
-    color: var(--text-color);
-    border-color: var(--card-border);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #000000;
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
 /* Footer */
 footer {
-    background-color: var(--text-color);
-    color: var(--bg-color);
+    background-color: #000000;
+    color: linear-gradient(135deg, #A4C5FF, #96A3FF, #A3A3FF, #A9B8F0);
 }
 
 /* Banner section specific styles */

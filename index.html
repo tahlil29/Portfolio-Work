@@ -9,46 +9,24 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body class="overflow-x-hidden transition-colors duration-500">
 
-    <!-- Header & Hamburger Menu -->
     <header class="sticky top-0 z-50 p-4 flex justify-between items-center rounded-b-lg transition-colors duration-500">
         <div class="text-2xl font-bold">My Portfolio</div>
 
-        <div class="flex items-center gap-4">
-            <!-- Light/Dark Mode Toggle Button -->
-            <button id="theme-toggle" class="p-2 rounded-full transition-transform transform hover:scale-110">
-                <i class="fas fa-sun text-yellow-500 text-lg"></i>
-            </button>
-            
-            <!-- Hidden checkbox to control the menu -->
-            <input type="checkbox" id="menu-toggle" class="hidden">
-            
-            <!-- Hamburger Icon -->
-            <label for="menu-toggle" class="hamburger-icon flex flex-col justify-between h-5 w-6 cursor-pointer z-50">
-                <span class="top"></span>
-                <span class="middle"></span>
-                <span class="bottom"></span>
-            </label>
-        </div>
-
-        <!-- Side Menu Overlay -->
-        <nav class="menu-overlay transform -translate-x-full fixed top-0 left-0 w-64 h-full shadow-xl transition-transform duration-300 ease-in-out z-40 p-6 flex flex-col items-start gap-4 rounded-r-lg">
-            <a href="#home" class="py-2 text-lg font-semibold transition-colors">Home</a>
-            <a href="#about" class="py-2 text-lg font-semibold transition-colors">About Me</a>
-            <a href="#work" class="py-2 text-lg font-semibold transition-colors">Work</a>
-            <a href="#skills" class="py-2 text-lg font-semibold transition-colors">Skills & Experience</a>
-            <a href="#contact" class="py-2 text-lg font-semibold transition-colors">Contact</a>
+        <nav class="flex items-center gap-6">
+            <a href="#home" class="text-lg font-semibold hover:text-blue-600 transition-colors">Home</a>
+            <a href="#about" class="text-lg font-semibold hover:text-blue-600 transition-colors">About Me</a>
+            <a href="#work" class="text-lg font-semibold hover:text-blue-600 transition-colors">Work</a>
+            <a href="#skills" class="text-lg font-semibold hover:text-blue-600 transition-colors">Skills & Experience</a>
+            <a href="#contact" class="text-lg font-semibold hover:text-blue-600 transition-colors">Contact</a>
         </nav>
     </header>
 
-    <!-- Main Content Sections -->
     <main class="container mx-auto p-6 md:p-12">
 
-        <!-- Home Section -->
         <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center p-6 rounded-xl shadow-md mb-12 transition-colors duration-500">
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4">Hello, I'm [Your Name]</h1>
             <p class="text-lg md:text-xl max-w-2xl">
@@ -57,11 +35,10 @@
             </p>
         </section>
 
-        <!-- About Me Section -->
         <section id="about" class="min-h-screen flex flex-col items-center justify-center p-6 rounded-xl shadow-md mb-12 transition-colors duration-500">
             <h2 class="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
             <div class="flex flex-col md:flex-row items-center gap-8 max-w-4xl">
-                <img src="https://images.unsplash.com/photo-1549692520-acc6669f6e0b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="A photo of me" class="rounded-full shadow-lg w-48 h-48 md:w-64 md:h-64 object-cover">
+                <img src="0fe9bba766201d818d6c5dea51a28957.jpg" alt="A photo of me" class="rounded-full shadow-lg w-48 h-48 md:w-64 md:h-64 object-cover">
                 <p class="text-base md:text-lg text-center md:text-left">
                     I am a [Your Profession] with a strong passion for technology and a knack for problem-solving.
                     I specialize in building responsive and accessible websites using modern web technologies.
@@ -71,11 +48,9 @@
             </div>
         </section>
 
-        <!-- Work Section -->
         <section id="work" class="min-h-screen p-6 rounded-xl shadow-md mb-12 transition-colors duration-500">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">My Work</h2>
             
-            <!-- Category Filter Buttons -->
             <div class="flex flex-wrap justify-center gap-4 mb-8">
                 <button class="filter-btn active-filter-btn" data-target="logos-branding-section">Logos & Branding</button>
                 <button class="filter-btn" data-target="print-design-section">Print Design</button>
@@ -83,87 +58,83 @@
                 <button class="filter-btn" data-target="banner-section">Banners</button>
             </div>
 
-            <!-- Logos & Branding Section -->
             <div id="logos-branding-section" class="work-section">
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="project-card bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200" data-project-image="https://images.unsplash.com/photo-1594917408803-12e2c2415170?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" data-project-description="A minimalist logo design for a tech startup, focused on clean lines and a modern aesthetic.">
-                        <img src="https://images.unsplash.com/photo-1594917408803-12e2c2415170?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Logo Project 1" class="rounded-md mb-4 w-full h-auto">
+                        <img src="photo-1522071820081-009f0129c71c.avif" alt="Logo Project 1" class="rounded-md mb-4 w-full h-auto">
                         <h3 class="text-lg font-semibold">Project Title 1</h3>
                         <p class="text-sm mb-4">A brief description of this project.</p>
                     </div>
                     <div class="project-card bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200" data-project-image="https://images.unsplash.com/photo-1606787620800-951e44356e6d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" data-project-description="Brand identity creation for a coffee shop, including logo, typography, and a warm color palette.">
-                        <img src="https://images.unsplash.com/photo-1606787620800-951e44356e6d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Logo Project 2" class="rounded-md mb-4 w-full h-auto">
+                        <img src="photo-1522071820081-009f0129c71c.avif" alt="Logo Project 1" class="rounded-md mb-4 w-full h-auto">
                         <h3 class="text-lg font-semibold">Project Title 2</h3>
                         <p class="text-sm mb-4">A brief description of this project.</p>
                     </div>
                     <div class="project-card bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200" data-project-image="https://images.unsplash.com/photo-1599305445672-997956c80556?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" data-project-description="An elegant logo for a fashion brand, combining a unique icon with a custom logotype.">
-                        <img src="https://images.unsplash.com/photo-1599305445672-997956c80556?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Logo Project 3" class="rounded-md mb-4 w-full h-auto">
+                        <img src="photo-1522071820081-009f0129c71c.avif" alt="Logo Project 1" class="rounded-md mb-4 w-full h-auto">
                         <h3 class="text-lg font-semibold">Project Title 3</h3>
                         <p class="text-sm mb-4">A brief description of this project.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Print Design Section -->
             <div id="print-design-section" class="work-section hidden">
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="project-card bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200" data-project-image="https://images.unsplash.com/photo-1557007284-93b5860d268d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" data-project-description="A series of vibrant event posters for a music festival, featuring bold typography and custom illustrations.">
-                        <img src="https://images.unsplash.com/photo-1557007284-93b5860d268d?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Print Project 1" class="rounded-md mb-4 w-full h-auto">
+                        <img src="photo-1522071820081-009f0129c71c.avif" alt="Logo Project 1" class="rounded-md mb-4 w-full h-auto">
                         <h3 class="text-lg font-semibold">Project Title 1</h3>
                         <p class="text-sm mb-4">A brief description of this project.</p>
                     </div>
                     <div class="project-card bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200" data-project-image="https://images.unsplash.com/photo-1588691888151-54c3046f4044?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" data-project-description="A minimalist brochure design for a real estate agency, focused on clean layouts and high-quality photography.">
-                        <img src="https://images.unsplash.com/photo-1588691888151-54c3046f4044?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Print Project 2" class="rounded-md mb-4 w-full h-auto">
+                        <img src="photo-1522071820081-009f0129c71c.avif" alt="Logo Project 1" class="rounded-md mb-4 w-full h-auto">
                         <h3 class="text-lg font-semibold">Project Title 2</h3>
                         <p class="text-sm mb-4">A brief description of this project.</p>
                     </div>
                     <div class="project-card bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200" data-project-image="https://images.unsplash.com/photo-1593642702749-bf26fde2c906?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" data-project-description="A compelling magazine ad for a travel company, using eye-catching visuals and a clear call to action.">
-                        <img src="https://images.unsplash.com/photo-1593642702749-bf26fde2c906?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Print Project 3" class="rounded-md mb-4 w-full h-auto">
+                        <img src="photo-1522071820081-009f0129c71c.avif" alt="Logo Project 1" class="rounded-md mb-4 w-full h-auto">
                         <h3 class="text-lg font-semibold">Project Title 3</h3>
                         <p class="text-sm mb-4">A brief description of this project.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Digital Design Section -->
             <div id="digital-design-section" class="work-section hidden">
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="project-card bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200" data-project-image="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" data-project-description="UI/UX design for a mobile fitness application, focusing on intuitive navigation and a motivating user interface.">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Digital Project 1" class="rounded-md mb-4 w-full h-auto">
+                        <img src="photo-1522071820081-009f0129c71c.avif" alt="Logo Project 1" class="rounded-md mb-4 w-full h-auto">
                         <h3 class="text-lg font-semibold">Project Title 1</h3>
                         <p class="text-sm mb-4">A brief description of this project.</p>
                     </div>
                     <div class="project-card bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200" data-project-image="https://images.unsplash.com/photo-1550756779-1c25143a530f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" data-project-description="A comprehensive website redesign for an online publication, improving readability and site performance.">
-                        <img src="https://images.unsplash.com/photo-1550756779-1c25143a530f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Digital Project 2" class="rounded-md mb-4 w-full h-auto">
+                        <img src="photo-1522071820081-009f0129c71c.avif" alt="Logo Project 1" class="rounded-md mb-4 w-full h-auto">
                         <h3 class="text-lg font-semibold">Project Title 2</h3>
                         <p class="text-sm mb-4">A brief description of this project.</p>
                     </div>
                     <div class="project-card bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200" data-project-image="https://images.unsplash.com/photo-1533709605330-9b626f634b3f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" data-project-description="Social media graphics and a content strategy created for a local restaurant's brand launch.">
-                        <img src="https://images.unsplash.com/photo-1533709605330-9b626f634b3f?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Digital Project 3" class="rounded-md mb-4 w-full h-auto">
+                        <img src="photo-1522071820081-009f0129c71c.avif" alt="Logo Project 1" class="rounded-md mb-4 w-full h-auto">
                         <h3 class="text-lg font-semibold">Project Title 3</h3>
                         <p class="text-sm mb-4">A brief description of this project.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Banner Section - AUTOMATIC SLIDESHOW -->
             <div id="banner-section" class="work-section hidden">
                 <div class="relative overflow-hidden w-full h-96">
                     <div id="banner-slider" class="flex transition-transform duration-1000 ease-in-out h-full">
                         <div class="banner-item flex-none w-full h-full relative" data-project-image="https://images.unsplash.com/photo-1510525287515-385055b8017c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" data-project-description="A responsive web banner for a new product launch, designed to capture attention across all devices." data-project-title="Banner Title 1">
-                            <img src="https://images.unsplash.com/photo-1510525287515-385055b8017c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Banner 1" class="absolute w-full h-full object-cover rounded-lg">
+                        <img src="photo-1522071820081-009f0129c71c.avif" alt="Logo Project 1" class="rounded-md mb-4 w-full h-auto">
                             <div class="absolute inset-0 flex flex-col justify-end items-center p-4">
                                 <h3 class="text-white text-xl font-bold mb-2">Banner Title 1</h3>
                             </div>
                         </div>
                         <div class="banner-item flex-none w-full h-full relative" data-project-image="https://images.unsplash.com/photo-1582213782179-e0d5333bbd44?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" data-project-description="A dynamic social media banner created for a promotional campaign." data-project-title="Banner Title 2">
-                            <img src="https://images.unsplash.com/photo-1582213782179-e0d5333bbd44?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Banner 2" class="absolute w-full h-full object-cover rounded-lg">
+                        <img src="photo-1522071820081-009f0129c71c.avif" alt="Logo Project 1" class="rounded-md mb-4 w-full h-auto">
                             <div class="absolute inset-0 flex flex-col justify-end items-center p-4">
                                 <h3 class="text-white text-xl font-bold mb-2">Banner Title 2</h3>
                             </div>
                         </div>
                         <div class="banner-item flex-none w-full h-full relative" data-project-image="https://images.unsplash.com/photo-1558509355-6b583f753c15?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" data-project-description="A series of web banners designed to drive traffic and sales for an e-commerce site." data-project-title="Banner Title 3">
-                            <img src="https://images.unsplash.com/photo-1558509355-6b583f753c15?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Banner 3" class="absolute w-full h-full object-cover rounded-lg">
+                        <img src="photo-1522071820081-009f0129c71c.avif" alt="Logo Project 1" class="rounded-md mb-4 w-full h-auto">
                             <div class="absolute inset-0 flex flex-col justify-end items-center p-4">
                                 <h3 class="text-white text-xl font-bold mb-2">Banner Title 3</h3>
                             </div>
@@ -176,7 +147,6 @@
 
         </section>
 
-        <!-- The Modal/Lightbox for full-size images -->
         <div id="image-modal" class="modal-overlay hidden">
             <div class="modal-content">
                 <span class="modal-close-btn">&times;</span>
@@ -186,11 +156,9 @@
             </div>
         </div>
 
-        <!-- Skills & Experience Section -->
         <section id="skills" class="min-h-screen p-6 rounded-xl shadow-md mb-12 transition-colors duration-500">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">Skills & Experience</h2>
             <div class="flex flex-col md:flex-row gap-12 max-w-4xl mx-auto">
-                <!-- Skills List -->
                 <div class="flex-1">
                     <h3 class="text-2xl font-semibold mb-4">Skills</h3>
                     <ul class="list-disc list-inside space-y-2">
@@ -203,11 +171,9 @@
                     </ul>
                 </div>
                 
-                <!-- Experience Timeline -->
                 <div class="flex-1">
                     <h3 class="text-2xl font-semibold mb-4">Experience</h3>
                     <div class="space-y-6">
-                        <!-- Job 1 -->
                         <div>
                             <h4 class="text-xl font-semibold">Junior Developer at Tech Solutions Inc.</h4>
                             <p class="text-sm">Jan 2022 - Present</p>
@@ -216,7 +182,6 @@
                                 teams, and contributed to front-end and back-end development cycles.
                             </p>
                         </div>
-                        <!-- Job 2 -->
                         <div>
                             <h4 class="text-xl font-semibold">Intern at Innovate Web Agency</h4>
                             <p class="text-sm">June 2021 - Dec 2021</p>
@@ -230,7 +195,6 @@
             </div>
         </section>
 
-        <!-- Contact Section -->
         <section id="contact" class="min-h-screen flex flex-col items-center justify-center p-6 rounded-xl shadow-md transition-colors duration-500">
             <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Contact Me</h2>
             <p class="text-center mb-8 max-w-lg">
@@ -240,11 +204,11 @@
                 <form id="contact-form" action="https://formspree.io/f/your_form_id" method="POST" class="space-y-6">
                     <div>
                         <label for="name" class="block text-sm font-medium">Name</label>
-                        <input type="text" id="name" name="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-white">
+                        <input type="text" id="name" name="name" rows="3" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-white">
                     </div>
                     <div>
                         <label for="email" class="block text-sm font-medium">Email Address</label>
-                        <input type="email" id="email" name="_replyto" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-white">
+                        <input type="email" id="email" name="_replyto" rows="3" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500 bg-white">
                     </div>
                     <div>
                         <label for="message" class="block text-sm font-medium">Message</label>
@@ -254,7 +218,6 @@
                         Send Message
                     </button>
                 </form>
-                <!-- Confirmation Message -->
                 <div id="form-status" class="mt-4 text-center font-semibold" style="display:none;">
                     Thank you! Your message has been sent.
                 </div>
@@ -263,7 +226,6 @@
 
     </main>
 
-    <!-- Footer -->
     <footer class="text-white text-center p-6 mt-12 rounded-t-xl transition-colors duration-500">
         <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
     </footer>
@@ -418,29 +380,6 @@
                 prevBanner();
             } else if (diffX < -50) { // Swiped left
                 nextBanner();
-            }
-        });
-
-        // Theme toggle script
-        const themeToggle = document.getElementById('theme-toggle');
-        const body = document.body;
-
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-        const currentTheme = localStorage.getItem('theme');
-
-        if (currentTheme === 'dark' || (currentTheme === null && prefersDark.matches)) {
-            body.classList.add('dark');
-            themeToggle.querySelector('i').classList.replace('fa-sun', 'fa-moon');
-        }
-
-        themeToggle.addEventListener('click', () => {
-            body.classList.toggle('dark');
-            if (body.classList.contains('dark')) {
-                localStorage.setItem('theme', 'dark');
-                themeToggle.querySelector('i').classList.replace('fa-sun', 'fa-moon');
-            } else {
-                localStorage.setItem('theme', 'light');
-                themeToggle.querySelector('i').classList.replace('fa-moon', 'fa-sun');
             }
         });
     </script>
