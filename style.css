@@ -1,0 +1,33 @@
+/* Base styles for the body and fonts */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6;
+    color: #1f2937;
+}
+
+/* --- Hamburger Menu CSS "Hack" --- */
+/* This CSS controls the hamburger menu's animation based on a hidden checkbox state */
+#menu-toggle:checked ~ .menu-overlay {
+    transform: translateX(0);
+}
+
+#menu-toggle:checked ~ .hamburger-icon .middle {
+    opacity: 0;
+}
+
+#menu-toggle:checked ~ .hamburger-icon .top {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#menu-toggle:checked ~ .hamburger-icon .bottom {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* The hamburger icon lines */
+.hamburger-icon span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #3b82f6;
+    transition: all 0.3s ease-in-out;
+}

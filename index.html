@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="overflow-x-hidden">
+
+    <header class="bg-white shadow-sm sticky top-0 z-50 p-4 flex justify-between items-center rounded-b-lg">
+        <div class="text-2xl font-bold text-gray-800">My Portfolio</div>
+
+        <input type="checkbox" id="menu-toggle" class="hidden">
+        
+        <label for="menu-toggle" class="hamburger-icon flex flex-col justify-between h-5 w-6 cursor-pointer z-50">
+            <span class="top"></span>
+            <span class="middle"></span>
+            <span class="bottom"></span>
+        </label>
+
+        <nav class="menu-overlay transform -translate-x-full fixed top-0 left-0 w-64 h-full bg-blue-600 text-white shadow-xl transition-transform duration-300 ease-in-out z-40 p-6 flex flex-col items-start gap-4 rounded-r-lg">
+            <a href="#home" class="py-2 text-lg font-semibold hover:text-blue-200 transition-colors">Home</a>
+            <a href="#about" class="py-2 text-lg font-semibold hover:text-blue-200 transition-colors">About Me</a>
+            <a href="#work" class="py-2 text-lg font-semibold hover:text-blue-200 transition-colors">Work</a>
+            <a href="#skills" class="py-2 text-lg font-semibold hover:text-blue-200 transition-colors">Skills & Experience</a>
+            <a href="#contact" class="py-2 text-lg font-semibold hover:text-blue-200 transition-colors">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container mx-auto p-6 md:p-12">
+
+        <section id="home" class="min-h-screen flex flex-col items-center justify-center text-center p-6 bg-white rounded-xl shadow-md mb-12">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-blue-600 mb-4">Hello, I'm [Your Name]</h1>
+            <p class="text-lg md:text-xl text-gray-700 max-w-2xl">
+                A passionate web developer creating beautiful and functional digital experiences.
+                Welcome to my portfolio!
+            </p>
+        </section>
+
+        <section id="about" class="min-h-screen flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-md mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center gap-8 max-w-4xl">
+                <img src="https://placehold.co/200x200/3b82f6/ffffff?text=Your+Photo" alt="A photo of me" class="rounded-full shadow-lg w-48 h-48 md:w-64 md:h-64 object-cover">
+                <p class="text-base md:text-lg text-gray-700 text-center md:text-left">
+                    I am a [Your Profession] with a strong passion for technology and a knack for problem-solving.
+                    I specialize in building responsive and accessible websites using modern web technologies.
+                    I believe in clean code, user-centric design, and continuous learning.
+                    In my free time, I enjoy [Your Hobby] and [Another Hobby].
+                </p>
+            </div>
+        </section>
+
+        <section id="work" class="min-h-screen p-6 bg-white rounded-xl shadow-md mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-10">My Work</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200">
+                    <img src="https://placehold.co/400x250/cbd5e1/475569?text=Project+1+Image" alt="Project 1" class="rounded-md mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Project Title 1</h3>
+                    <p class="text-gray-600 text-sm mb-4">A brief description of this project, its purpose, and the technologies used. For example, "A full-stack e-commerce site built with React and Node.js."</p>
+                    <a href="#" class="inline-block bg-blue-500 text-white font-medium py-2 px-4 rounded-full hover:bg-blue-600 transition-colors">View Project</a>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200">
+                    <img src="https://placehold.co/400x250/cbd5e1/475569?text=Project+2+Image" alt="Project 2" class="rounded-md mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Project Title 2</h3>
+                    <p class="text-gray-600 text-sm mb-4">A brief description of this project, its purpose, and the technologies used. For example, "A data visualization dashboard built with D3.js."</p>
+                    <a href="#" class="inline-block bg-blue-500 text-white font-medium py-2 px-4 rounded-full hover:bg-blue-600 transition-colors">View Project</a>
+                </div>
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200">
+                    <img src="https://placehold.co/400x250/cbd5e1/475569?text=Project+3+Image" alt="Project 3" class="rounded-md mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Project Title 3</h3>
+                    <p class="text-gray-600 text-sm mb-4">A brief description of this project, its purpose, and the technologies used. For example, "A mobile-first photography portfolio."</p>
+                    <a href="#" class="inline-block bg-blue-500 text-white font-medium py-2 px-4 rounded-full hover:bg-blue-600 transition-colors">View Project</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="min-h-screen p-6 bg-white rounded-xl shadow-md mb-12">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-10">Skills & Experience</h2>
+            <div class="flex flex-col md:flex-row gap-12 max-w-4xl mx-auto">
+                <div class="flex-1">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Skills</h3>
+                    <ul class="list-disc list-inside space-y-2 text-gray-700">
+                        <li>Web Development: HTML5, CSS3, JavaScript (ES6+)</li>
+                        <li>Frameworks: React, Vue.js, Angular</li>
+                        <li>Styling: Tailwind CSS, Sass, Bootstrap</li>
+                        <li>Backend: Node.js, Express, Python, Django</li>
+                        <li>Databases: MongoDB, PostgreSQL, Firebase</li>
+                        <li>Tools: Git, GitHub, VS Code, Figma</li>
+                    </ul>
+                </div>
+                
+                <div class="flex-1">
+                    <h3 class="text-2xl font-semibold text-blue-600 mb-4">Experience</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-800">Junior Developer at Tech Solutions Inc.</h4>
+                            <p class="text-sm text-gray-500">Jan 2022 - Present</p>
+                            <p class="text-gray-700 mt-2">
+                                Developed and maintained responsive web applications, collaborated with cross-functional
+                                teams, and contributed to front-end and back-end development cycles.
+                            </p>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-semibold text-gray-800">Intern at Innovate Web Agency</h4>
+                            <p class="text-sm text-gray-500">June 2021 - Dec 2021</p>
+                            <p class="text-gray-700 mt-2">
+                                Assisted senior developers in building and deploying client websites, focusing on
+                                front-end implementation and bug fixing.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="min-h-screen flex flex-col items-center justify-center p-6 bg-white rounded-xl shadow-md">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Contact Me</h2>
+            <p class="text-gray-700 text-center mb-8 max-w-lg">
+                I'm always open to new opportunities and collaborations. Feel free to reach out to me!
+            </p>
+            <div class="w-full max-w-lg">
+                <form id="contact-form" action="https://formspree.io/f/xzzanpre" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                        <input type="text" id="name" name="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+                        <input type="email" id="email" name="_replyto" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
+                        <textarea id="message" name="message" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
+                    </div>
+                    <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-full shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Send Message
+                    </button>
+                </form>
+                <div id="form-status" class="mt-4 text-center text-green-600 font-semibold" style="display:none;">
+                    Thank you! Your message has been sent.
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center p-6 mt-12 rounded-t-xl">
+        <p>&copy; 2024 My Portfolio. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const form = document.getElementById('contact-form');
+        const status = document.getElementById('form-status');
+
+        // Handles form submission
+        form.addEventListener("submit", async function(event) {
+            // Prevent the default form submission
+            event.preventDefault();
+
+            // Hide the status message
+            status.style.display = 'none';
+
+            // Use the FormData API to get form data
+            const formData = new FormData(form);
+
+            // Send the form data to the action URL
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                // If the response is a success
+                if (response.ok) {
+                    status.innerText = "Thank you! Your message has been sent.";
+                    status.style.display = 'block';
+                    form.reset();
+                } else {
+                    // Handle errors
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            status.innerText = data["errors"].map(error => error["message"]).join(", ");
+                        } else {
+                            status.innerText = "Oops! There was a problem submitting your form.";
+                        }
+                        status.style.display = 'block';
+                    });
+                }
+            }).catch(error => {
+                status.innerText = "Oops! There was a network issue. Please try again.";
+                status.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
